@@ -2,105 +2,107 @@ import java.util.*;
 
 public class JavaBasic{
     public static void main(String args[]){
-        // if-else
-/*         Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the student number ");
-        int marks= scn.nextInt();
-        if(marks>=33){
-            System.out.println("Congratulations you Passed the exam");
-        }else{
-            System.out.println("Sorry you are failed the exam ! Better Luck Next Time");
+        //for loop
+    /*     for(int i=0; i<=100; i++){
+            System.out.println("hello ankit");
         } */
-
-        //else-if
-/*         Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the student number ");
-        int marks= scn.nextInt();
-        if(marks>=80){
-            System.out.println("You are a good student");
-        }else if(marks >= 60){
-            System.out.println("Average student");
-        }else if(marks>=33){
-            System.out.println("Below Average  ");
-        }else{
-            System.out.println("Sorry you are failed the exam ! Better Luck Next Time");
+       //while loop
+/*         int counter = 0;
+        while (counter<=100) {
+        System.out.println(counter);
+        counter++;
         } */
-
-        //odd even
-/*         Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the number ");
-        int number= scn.nextInt();
-        if(number % 2 == 0){
-            System.out.println("The given Number is Even");
+        /* System.out.println("Please enter the range");
+        Scanner scn=new Scanner(System.in);
+        int range=scn.nextInt();
+        int counter=1;
+        while (counter<=range) {
+            System.out.println(counter);
+            counter++;
+        } */
+/*         System.out.println("Please enter the range");
+        Scanner scn=new Scanner(System.in);
+        int range=scn.nextInt();
+        int counter=1;
+        int sum=0;
+        while (counter<=range) {
+            System.out.println(counter);
+            sum=sum+counter;
+            counter++;
         }
-        else{
-            System.out.println("The given Number is odd");
-    } */
+        System.out.println("The sum = " + sum); */
 
-        //largest three number
-        /* Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the first number ");
-                int a= scn.nextInt();
-        System.out.println("Please enter the second number ");
-                int b= scn.nextInt();
-        System.out.println("Please enter the Third number ");
-                int c= scn.nextInt();
-        if(a > b && a > c){
-            System.out.println(a);
-        }else if(b > c){
-            System.out.println(b);
-        }else {
-            System.out.println(c);
+        //stars print
+/*         for(int i=1;i<=4;i++){
+            System.out.println("****");
         } */
 
-        //IT
-/*         Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the amount ");
-                float income= scn.nextInt();
-                float tax;
-        if(income<=500000){
-            tax=0;
-        }else if(income>500000 && income<=1000000){
-            tax = (income/100*20);
-        }else {
-            tax=(income/100*30);
-        } 
-        System.out.println("your tax is " + tax); */
+        //reverse number
+/*         System.out.println("Please Enter the number");
+        Scanner scn=new Scanner(System.in);
+        int number=scn.nextInt();
+        while(number>0){
+            int lastDigit=number%10; // Kisi bhi number ka last digit nikalna ho to modulo ka use hota hai
+            System.out.print(lastDigit);
+            number=number/10; //Kisi bhi number ke last digit ko hatana ho to divide ka use hota hai.
+        } */
 
-        //ternary operator
-/*         Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the first number ");
-            int a= scn.nextInt();
-/*         System.out.println("Please enter the second number ");
-            int b= scn.nextInt();
-        int larger = (a>b)?a:b;
-        System.out.println(larger); 
-        String number= (a % 2 == 0)?"Even":"Odd";
-        System.out.println(number); */
-        
-        //switch
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Please enter the item number ");
-            int a= scn.nextInt();
-            switch (a) {
-                case 1: 
-                    System.out.println("Burger");
-                    break;
-                    case 2: 
-                    System.out.println("Maggie");
-                    break;               
-                    case 3: 
-                    System.out.println("Pasta");
-                    break;                
-                    case 4: 
-                    System.out.println("Momos");
-                    break;                
-                    case 5: 
-                    System.out.println("Tikki");
-                    break;
-                default:
-                    System.out.println("Sb spna Tha");
-                    break;
+        //reverse the number and save in a new variable
+   /*      System.out.println("Please Enter the number");
+        Scanner scn=new Scanner(System.in);
+        int number=scn.nextInt();
+        int reverse=0;
+        while(number>0){
+            int lastDigit=number%10;
+            reverse=(reverse*10)+lastDigit;
+            number=number/10;                     
+        }
+        System.out.print(reverse);*/
+
+        //break
+/*         for(int i=1;i<=10;i++){
+            if(i==5){
+                break;
             }
-}
-}
+            System.out.println(i);
+        }
+        System.out.println("I am out of the loop"); */
+/*         Scanner scn=new Scanner(System.in);
+        while (true) {
+                    System.out.print("Please Enter the number : ");
+            int n=scn.nextInt();
+            if (n%10==0) {
+                break;
+            }
+            System.out.println(n);
+        }
+        System.out.println("You enter a number which is totally divisible by 10.");*/
+
+        //continue
+/*                 Scanner scn=new Scanner(System.in);
+        while (true) {
+                    System.out.print("Please Enter the number : ");
+            int n=scn.nextInt();
+            if (n%10==0) {
+                continue;
+            }
+            System.out.println(n);
+        } //it is use to skip a particular value or a particular range. */
+
+        //number is prime or not
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter the number to check ");
+        int n=sc.nextInt();
+        boolean isPrime=true;
+        for(int i=2;i<=n-1;i++){
+            if(n%i==0){
+                isPrime=false;
+            }
+        }
+        if(isPrime==true){
+            System.out.println(n + " is prime");
+        }else{
+            System.out.println(n + " is not prime");
+        }
+} 
+}  
