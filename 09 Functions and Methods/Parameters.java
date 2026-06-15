@@ -1,6 +1,7 @@
+
 import java.util.*;
 
-public class JavaBasic{
+public class Parameters{
 
     /* public static void printAnkit(){
         System.out.println("Ankit Mall");
